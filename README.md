@@ -2,6 +2,10 @@
 
 A responsive, static website offering free browser-based PDF and document utilities.
 
+## Live website
+
+https://toolbazar.github.io/
+
 ## Run locally
 
 Open `index.html` in a modern browser, or serve the folder with any static web server. No build step is required.
@@ -10,17 +14,17 @@ Open `index.html` in a modern browser, or serve the folder with any static web s
 
 - Responsive landing page, searchable/filterable tool catalogue and accessible processing dialog.
 - Browser-side PDF merge, page extraction/removal/reordering, rotation, watermark, page numbering, text extraction, PDF-to-JPG export and image-to-PDF.
-- DOCX text conversion to PDF and PDF text export to a Word-compatible document.
-- Privacy and terms pages, robots.txt and sitemap.xml.
+- DOCX text conversion to PDF and PDF text export to an editable DOCX.
+- Privacy and terms pages, custom 404 page, robots.txt and sitemap.xml.
 
 ## Important functionality notes
 
-- **Compress PDF** rasterizes pages to JPEG and rebuilds the PDF. It can reduce file size, but it flattens content and can reduce quality; it is not a lossless optimizer.
-- **PDF to Word** extracts text into a Word-compatible document; original layout and images are not retained.
+- **Compress PDF** rasterizes pages to JPEG and rebuilds the PDF. It can reduce file size, but flattens content and may reduce quality; it is not a lossless optimizer.
+- **PDF to Word** extracts text into an editable DOCX; original layout and images are not retained.
 - **Word to PDF** supports DOCX text/basic formatting only; complex layouts may change.
-- **Protect PDF / Unlock PDF** are shown in the catalogue but password encryption/decryption are not implemented in this build.
+- **Protect PDF / Unlock PDF** are listed but password encryption/decryption are not implemented in this build. The interface reports this limitation instead of claiming success.
 - Third-party PDF, document and ZIP libraries are loaded from public CDNs. A network connection is required to load them.
 
 ## Deployment
 
-The repository name is `toolbazar.githun.io`, which is not the conventional `toolbazar.github.io` Pages repository name. Configure GitHub Pages to deploy from the `main` branch (or merge the reviewed build branch first) and use the custom domain / Pages URL configured in repository settings. Update canonical, sitemap and robots URLs to the actual published domain before launch.
+This repository is named `toolbazar.github.io`, so GitHub Pages is expected to publish the site at https://toolbazar.github.io/. GitHub Pages must be enabled for the `main` branch (root folder). The sitemap and canonical URLs are configured for that root domain.
