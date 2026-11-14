@@ -28,3 +28,11 @@ Open `index.html` in a modern browser, or serve the folder with any static web s
 ## Deployment
 
 This repository is named `toolbazar.github.io`, so GitHub Pages is expected to publish the site at https://toolbazar.github.io/. GitHub Pages must be enabled for the `main` branch (root folder). The sitemap and canonical URLs are configured for that root domain.
+
+
+## SEO and learning guides
+
+- The homepage includes WebSite, Organization and SoftwareApplication structured data.
+- The `blog/` directory contains original how-to guides for reversing, inserting and duplicating PDF pages, with canonical URLs, Article metadata, breadcrumbs and internal links.
+- `sitemap.xml` lists the homepage, guide index, individual guides and legal pages. `robots.txt` points crawlers to the sitemap.
+- Search visibility and indexing are controlled by search engines; valid metadata and sitemap submission do not guarantee rankings or inclusion.
