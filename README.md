@@ -13,7 +13,7 @@ Open `index.html` in a modern browser, or serve the folder with any static web s
 ## Included
 
 - Responsive landing page, searchable/filterable tool catalogue and accessible processing dialog.
-- Browser-side PDF merge, page extraction/removal/reordering/reversal, blank-page insertion, page duplication, rotation, watermark, page numbering, text extraction, PDF-to-JPG ZIP export and image-to-A4-PDF conversion.
+- Browser-side PDF merge, page extraction/removal/reordering/reversal, blank-page insertion, page duplication, rotation, watermark, page numbering, text extraction, PDF-to-JPG ZIP export, image-to-A4-PDF conversion and Excel workbook-to-PDF export.
 - DOCX text conversion to PDF and PDF text export to an editable DOCX.
 - Privacy and terms pages, custom 404 page, robots.txt and sitemap.xml.
 
@@ -22,8 +22,9 @@ Open `index.html` in a modern browser, or serve the folder with any static web s
 - **Compress PDF** rasterizes pages to JPEG and rebuilds the PDF. It can reduce file size, but flattens content and may reduce quality; it is not a lossless optimizer.
 - **PDF to Word** extracts selectable text into an editable DOCX and uses text positioning to retain some line breaks; original layout and images are not retained.
 - **Word to PDF** converts paragraphs, headings, lists and table rows; complex styling, images and exact page layout are not preserved.
+- **Excel to PDF** accepts `.xlsx`, `.xls` and `.xlsm` workbooks and exports each non-empty worksheet as a landscape PDF table. Cell values and displayed number/date text are included; original styling, charts, images, formulas as formulas and exact print layout are not preserved.
 - **Protect PDF / Unlock PDF** are listed but password encryption/decryption are not implemented in this build. The interface reports this limitation instead of claiming success.
-- Third-party PDF, document and ZIP libraries are loaded from public CDNs. A network connection is required to load them.
+- Third-party PDF, spreadsheet, document and ZIP libraries are loaded from public CDNs. A network connection is required to load them.
 
 ## Deployment
 
@@ -33,6 +34,6 @@ This repository is named `toolbazar.github.io`, so GitHub Pages is expected to p
 ## SEO and learning guides
 
 - The homepage includes WebSite, Organization and SoftwareApplication structured data.
-- The `blog/` directory contains 21 original how-to guides covering every currently working tool, with canonical URLs, Article metadata, breadcrumbs and contextual internal links. Password protection and unlocking are excluded because those features are not implemented.
+- The `blog/` directory contains 22 original how-to guides covering every currently working tool, with canonical URLs, Article metadata, breadcrumbs and contextual internal links. Password protection and unlocking are excluded because those features are not implemented.
 - `sitemap.xml` lists the homepage, guide index, individual guides and legal pages. `robots.txt` points crawlers to the sitemap.
 - Search visibility and indexing are controlled by search engines; valid metadata and sitemap submission do not guarantee rankings or inclusion.
