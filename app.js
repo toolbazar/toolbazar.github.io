@@ -53,11 +53,12 @@ async function process(){if(downloadUrl){URL.revokeObjectURL(downloadUrl);downlo
 async function runTool(t){const {PDFDocument,StandardFonts,rgb,degrees}=PDFLib;const f=selectedFiles[0];if(t.fn==='jpg-pdf'){const pdf=await PDFDocument.create();for(const file of selectedFiles){const data=await file.arrayBuffer();const ext=file.name.split('.').pop().toLowerCase(),isPng=file.type==='image/png'||ext==='png';const img=isPng?await pdf.embedPng(data):await pdf.embedJpg(data);const landscape=img.width>img.height,pageWidth=landscape?841.89:595.28,pageHeight=landscape?595.28:841.89,page=pdf.addPage([pageWidth,pageHeight]),margin=24,scale=Math.min((pageWidth-margin*2)/img.width,(pageHeight-margin*2)/img.height),width=img.width*scale,height=img.height*scale;page.drawImage(img,{x:(pageWidth-width)/2,y:(pageHeight-height)/2,width,height})}return{blob:new Blob([await pdf.save()],{type:'application/pdf'}),name:'images-to-pdf.pdf'}}
 if(t.fn==='excel-pdf'){
  if(!window.XLSX)throw Error('The Excel reader could not load. Check your internet connection and try again.');
- if(!window.jspdf?.jsPDF||!window.jspdfAutoTable)throw Error('The PDF export library could not load. Refresh the page and try again.');
+ if(!window.jspdf?.jsPDF)throw Error('The PDF export library could not load. Refresh the page and try again.');
  const workbook=XLSX.read(await f.arrayBuffer(),{type:'array',cellDates:true});
  const sheets=workbook.SheetNames||[];
  if(!sheets.length)throw Error('No worksheets were found in this workbook.');
  const doc=new jspdf.jsPDF({orientation:'landscape',unit:'pt',format:'a4'});
+ if(typeof doc.autoTable!=='function')throw Error('The spreadsheet table exporter could not load. Refresh the page and try again.');
  let rendered=0;
  for(const sheetName of sheets){
   const worksheet=workbook.Sheets[sheetName];
