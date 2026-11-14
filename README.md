@@ -13,7 +13,7 @@ Open `index.html` in a modern browser, or serve the folder with any static web s
 ## Included
 
 - Responsive landing page, searchable/filterable tool catalogue and accessible processing dialog.
-- Browser-side PDF merge, page extraction/removal/reordering, rotation, watermark, page numbering, text extraction, PDF-to-JPG ZIP export and image-to-A4-PDF conversion.
+- Browser-side PDF merge, page extraction/removal/reordering/reversal, blank-page insertion, page duplication, rotation, watermark, page numbering, text extraction, PDF-to-JPG ZIP export and image-to-A4-PDF conversion.
 - DOCX text conversion to PDF and PDF text export to an editable DOCX.
 - Privacy and terms pages, custom 404 page, robots.txt and sitemap.xml.
 
