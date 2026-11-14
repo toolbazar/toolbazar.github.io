@@ -33,6 +33,6 @@ This repository is named `toolbazar.github.io`, so GitHub Pages is expected to p
 ## SEO and learning guides
 
 - The homepage includes WebSite, Organization and SoftwareApplication structured data.
-- The `blog/` directory contains original how-to guides for reversing, inserting and duplicating PDF pages, with canonical URLs, Article metadata, breadcrumbs and internal links.
+- The `blog/` directory contains 21 original how-to guides covering every currently working tool, with canonical URLs, Article metadata, breadcrumbs and contextual internal links. Password protection and unlocking are excluded because those features are not implemented.
 - `sitemap.xml` lists the homepage, guide index, individual guides and legal pages. `robots.txt` points crawlers to the sitemap.
 - Search visibility and indexing are controlled by search engines; valid metadata and sitemap submission do not guarantee rankings or inclusion.
