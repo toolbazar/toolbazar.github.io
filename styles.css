@@ -14,3 +14,5 @@
 .status{line-height:1.55;overflow-wrap:anywhere}
 .process-btn:disabled{opacity:.55;cursor:not-allowed}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+.tool-card.unavailable{cursor:not-allowed;opacity:.62;background:#fafafa}.tool-card.unavailable:hover{border-color:var(--line);box-shadow:none;transform:none}.tool-card.unavailable .tool-arrow{font-size:9px;letter-spacing:.02em}.preview-area{margin:14px 0;padding:12px;border:1px solid var(--line);border-radius:10px;background:#f8f8fc;text-align:center;max-height:420px;overflow:auto}.preview-area img{display:block;max-width:100%;height:auto;margin:0 auto;border-radius:4px}
