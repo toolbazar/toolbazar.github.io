@@ -22,8 +22,9 @@ Open `index.html` in a modern browser, or serve the folder with any static web s
 - **Compress PDF** rasterizes pages to JPEG and rebuilds the PDF. It can reduce file size, but flattens content and may reduce quality; it is not a lossless optimizer.
 - **PDF to Word** extracts selectable text into an editable DOCX and uses text positioning to retain some line breaks; original layout and images are not retained.
 - **Word to PDF** converts paragraphs, headings, lists and table rows; complex styling, images and exact page layout are not preserved.
+- **Excel to PDF** accepts `.xlsx`, `.xls` and `.xlsm` workbooks and exports each non-empty worksheet as a landscape PDF table. Cell values and displayed number/date text are included; original styling, charts, images, formulas as formulas and exact print layout are not preserved.
 - **Protect PDF / Unlock PDF** are listed but password encryption/decryption are not implemented in this build. The interface reports this limitation instead of claiming success.
-- Third-party PDF, document and ZIP libraries are loaded from public CDNs. A network connection is required to load them.
+- Third-party PDF, spreadsheet, document and ZIP libraries are loaded from public CDNs. A network connection is required to load them.
 
 ## Deployment
 
