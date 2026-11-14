@@ -46,3 +46,5 @@
 .breadcrumbs{font-size:11px;color:#85879b;margin-bottom:26px}
 .breadcrumbs a{color:var(--purple)}
 @media(max-width:650px){.guide-grid{grid-template-columns:1fr}.guide-card p{min-height:0}.guides-section{padding:0 18px 65px}.article-shell{padding:38px 18px 65px}.article-content{font-size:14px}.article-content h2{font-size:22px}}
+
+.blog-list h2{font:700 19px Manrope;line-height:1.4;margin:12px 0 8px}
