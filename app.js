@@ -29,10 +29,10 @@ function bytes(n){return n<1024*1024?(n/1024).toFixed(1)+' KB':(n/1024/1024).toF
 function addFiles(files){
  const incoming=Array.from(files||[]);
  const multi=['merge','jpg-pdf'].includes(activeTool?.fn);
- const allowed=activeTool?.fn==='jpg-pdf'?/\\.(jpe?g|png)$/i:activeTool?.fn==='word-pdf'?/\\.docx$/i:/\\.pdf$/i;
+ const allowedExt=activeTool?.fn==='jpg-pdf'?['jpg','jpeg','png']:activeTool?.fn==='word-pdf'?['docx']:['pdf'];
  if(!incoming.length)return;
  if(!multi&&incoming.length>1){$('#status').textContent='This tool accepts one file at a time. Please choose a single file.';return}
- if(incoming.some(file=>!allowed.test(file.name))){$('#status').textContent=activeTool?.fn==='jpg-pdf'?'Please select JPG or PNG images only.':activeTool?.fn==='word-pdf'?'Please select a DOCX document.':'Please select PDF files only.';return}
+ if(incoming.some(file=>!allowedExt.includes(file.name.split('.').pop().toLowerCase()))){$('#status').textContent=activeTool?.fn==='jpg-pdf'?'Please select JPG or PNG images only.':activeTool?.fn==='word-pdf'?'Please select a DOCX document.':'Please select PDF files only.';return}
  if(incoming.some(file=>file.size>100*1024*1024)){ $('#status').textContent='Each file must be smaller than 100 MB to avoid browser memory problems.';return}
  if(incoming.reduce((sum,file)=>sum+file.size,0)>250*1024*1024){$('#status').textContent='The selected files total more than 250 MB. Choose a smaller set of files.';return}
  selectedFiles=incoming;
